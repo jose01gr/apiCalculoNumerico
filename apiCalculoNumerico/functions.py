@@ -5,6 +5,7 @@ import sympy as sp
 from sympy import Symbol
 from sympy import series
 from sympy import *
+print"life is beauty"
 
 app = FastAPI()
 
