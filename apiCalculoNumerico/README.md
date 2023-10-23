@@ -1,68 +1,43 @@
 # CalculadoraCalculoNumerico
-Esta es una aplicación de calculadora que resuelve sistemas de ecuaciones lineales, encuentra autovalores y autovectores de matrices, y realiza interpolación.
-## Descripción
+Esta es una aplicación de Calculo Numérico que te permite realizar diversas operaciones, incluyendo la resolución de ecuaciones de una variable, la aproximación de funciones y la diferenciación e integración de funciones.
 
-Esta aplicación se ha desarrollado utilizando la biblioteca `flet` y la biblioteca `numpy` de Python para realizar cálculos numéricos. Proporciona tres funciones principales:
 
 ## Requisitos
 - Python 3.x
 - Biblioteca Flet
-- Biblioteca Numpy
+- Biblioteca Symmpy
 
 ## Instalación
 
-1. Crea un entorno virtual:
+-Clona este repositorio en tu máquina local:
+   git clone https://github.com/tu-usuario/calculadora-calculo-numerico.git
 
-   ```bash
-   python3 -m venv env
+-Navega a la carpeta del proyecto:
+   cd calculadora-calculo-numerico
 
-2. Activa el entorno virtual:
- 
-   source env/bin/activate
-
-3. Instala la librería Flet (si no está instalada):
-
-   pip install flet
-
-4. Ejecuta la aplicación:
-   python app.py
-     
+-Instala las dependencias requeridas:
+   pip install -r requirements.txt
+Esto iniciará la aplicación y abrirá una interfaz gráfica en tu navegador.
 
 
-## Uso
+## Funcionalidades
 
-Ejecuta la aplicación Python y se abrirá una interfaz gráfica que te permitirá realizar varios tipos de cálculos numéricos:
+La aplicación ofrece las siguientes funcionalidades:
 
-1. **Sistema de Ecuaciones Lineales 3x3:** Permite al usuario ingresar los coeficientes de un sistema de ecuaciones lineales y resuelve las incógnitas `X`, `Y` y `Z` utilizando la eliminación gaussiana. Los resultados se muestran en la interfaz gráfica.
+1. **Resolución de Ecuaciones de una Variable:** Permite ingresar una ecuación y resuelve las soluciones para `x`.
 
-2. **Autovector y Autovalor:** Permite al usuario ingresar una matriz y encuentra los autovectores y autovalores correspondientes utilizando la biblioteca `numpy`. Los resultados se muestran en la interfaz gráfica.
+2. **Aproximación de Funciones:** Puedes ingresar elementos de una función y la aplicación aproximará la función con un polinomio de segundo grado.
 
-3. **Interpolación:** Esta función permite al usuario realizar la interpolación lineal de un valor desconocido `Y` en un `X` ingresado por el usuario, dado dos pares de valores `X` e `Y`. El resultado se muestra en la interfaz gráfica.
+3. **Diferenciación e Integración de Funciones:** Permite ingresar una función, un valor y un intervalo, y la aplicación calculará la derivada en un punto y realizará la integración en un intervalo.
 
-Simplemente sigue las instrucciones en la interfaz para ingresar los datos necesarios y realizar los cálculos.
+## API
 
-## Ejemplo
+La aplicación incluye una API que se utiliza para realizar los cálculos subyacentes. Puedes acceder a la API a través de los siguientes puntos finales:
 
-Para usar la aplicación:
+- `POST /aproximar`: Aproxima una función con un polinomio de segundo grado.
 
-1. Ejecuta la aplicación Python.
+- `POST /resolver`: Resuelve una ecuación de una variable.
 
-2. Elige una de las opciones disponibles, por ejemplo, "Sistema de Ecuaciones".
+- `POST /diferenciar`: Diferencia una función en un punto dado.
 
-3. Ingresa los datos requeridos, como los coeficientes del sistema.
-
-4. Haz clic en el botón correspondiente para realizar el cálculo.
-
-5. Observa los resultados en la interfaz de usuario.
-
-## Contribución
-
-Si deseas contribuir a este proyecto, sigue estos pasos:
-
-1. Haz un fork del repositorio.
-
-2. Crea una rama para tu contribución: `git checkout -b mi-contribucion`
-
-3. Realiza tus cambios y compromételos: `git commit -m "Añade una nueva característica"`
-
-4. Envía una solicitud de extracción.
+- `POST /integrar`: Integra una función en un intervalo dado.
