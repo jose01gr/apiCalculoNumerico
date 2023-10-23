@@ -10,7 +10,7 @@ def main(page: Page):
     page.title = "Calculadora de Ecuaciones"
 
     #text field de la ecuacion
-    e1=ft.TextField(label="",width=50,height=40,bgcolor ="#A4B7CF",color ="#1a2e41")
+    e1=ft.TextField(label="",width=100,height=40,bgcolor ="#A4B7CF",color ="#1a2e41")
     ex = ft.Text("Ecuacion: ",color="#1a2e41",size=20,font_family="Consolas",style=TextStyle(weight=FontWeight.BOLD))
     
     #text del Resultado
@@ -30,7 +30,7 @@ def main(page: Page):
 
     #text fields de las funciones y sus puntos
     ec = ft.Text("Ecuacion: ",color="#1a2e41",size=20,font_family="Consolas",style=TextStyle(weight=FontWeight.BOLD))
-    e2 =ft.TextField(label="",width=50,height=40,bgcolor ="#A4B7CF",color ="#1a2e41")
+    e2 =ft.TextField(label="",width=100,height=40,bgcolor ="#A4B7CF",color ="#1a2e41")
     x =ft.TextField(label="x ",width=50,height=40,bgcolor ="#A4B7CF",color ="#1a2e41")
     b =ft.TextField(label="b ",width=50,height=40,bgcolor ="#A4B7CF",color ="#1a2e41")
     c =ft.TextField(label="c ",width=50,height=40,bgcolor ="#A4B7CF",color ="#1a2e41")
@@ -203,8 +203,7 @@ def main(page: Page):
                                 ft.Column([
                                     ft.Row([ft.Text("Ingrese la ecuacion y los valores",color="#1a2e41",size=16,font_family="Consolas",style=TextStyle(weight=FontWeight.BOLD)) ],alignment=ft.MainAxisAlignment.CENTER),
                                     ft.Row([ec,e2],spacing=20,alignment=ft.MainAxisAlignment.CENTER),
-                                    ft.Row([x],spacing=20,alignment=ft.MainAxisAlignment.CENTER),
-                                    ft.Row([b,c],alignment=ft.MainAxisAlignment.CENTER),
+                                    ft.Row([x,b,c],spacing=20,alignment=ft.MainAxisAlignment.CENTER),
                                     ft.ElevatedButton(text="RESOLVER DIFERENCIACION",bgcolor ="#1a2e41" ,color = "#D9D9D9", height=40,width=400,on_click=resolverDiferenciacion),
                                     ft.ElevatedButton(text="RESOLVER INTEGRACION",bgcolor ="#1a2e41" ,color = "#D9D9D9", height=40,width=400,on_click=resolverIntegracion),
                                     ft.ElevatedButton(text="LIMPIAR",bgcolor ="#4C6B94" ,color = "#D9D9D9", height=40,width=200,on_click=limpiar),
